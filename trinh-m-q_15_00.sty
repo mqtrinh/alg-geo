@@ -1,0 +1,203 @@
+%--------------------------------------------------------------------------
+% 
+%	Copyright 2015 by Minh-Tam Trinh.
+%				 
+%	This work is licensed under a Creative Commons
+%	Attribution-NonCommercial-ShareAlike 4.0 Unported License.
+%
+%	http://creativecommons.org/licenses/by-nc-sa/4.0/
+%
+%	Version 15.00.
+%
+%	Contents
+%
+%	1.	Packages
+%	2.	Global fonts
+%	3.	Formatting
+%	4.	Math fonts
+%	5.	Other commands and operators
+%
+%	Notes
+%
+%	A font option (lmodern, garamondx) can be specified when
+%	the package is loaded. The default option is lmodern.
+%
+%	The secnum option modifies the numbering in equation and
+%	theorem environments to include section number.
+%	
+%	The cat option loads abbreviations in category theory. The
+%	lie option loads symbols for common classical Lie groups.
+%
+%--------------------------------------------------------------------------
+
+\ProvidesPackage{trinh-m-q_15_00}
+
+%--------------------------------------------------------------------------
+%
+%	1.	Packages
+%
+%--------------------------------------------------------------------------
+
+%	http://tex.stackexchange.com/a/71544
+
+\usepackage[T1]{fontenc}
+\usepackage[ascii]{inputenc}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage[australian]{babel}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+	\hypersetup{colorlinks,linktoc=page}
+\usepackage{mathtools}
+\usepackage{microtype}
+\usepackage{verbatim}
+
+\DeclareOption{lmodern}				{\count255=0}
+\DeclareOption{garamondx}			{\count255=1}
+
+\newif\if@secnum
+\newif\if@cat
+\newif\if@lie
+
+\DeclareOption{secnum}				{\@secnumtrue}
+\DeclareOption{cat}				{\@cattrue}
+\DeclareOption{lie}					{\@lietrue}
+
+\ExecuteOptions{lmodern}
+
+\ProcessOptions\relax
+
+%--------------------------------------------------------------------------
+%
+% 	2.	Global fonts
+%
+%--------------------------------------------------------------------------
+
+\usepackage{eucal}
+
+\ifcase\count255
+	\usepackage{lmodern}
+	\usepackage{stmaryrd}
+\or
+	\pdfmapfile{+zi4.map}
+
+	\usepackage{garamondx}
+	\usepackage{mweights}
+	\usepackage[sf]{libertine}
+	\usepackage{zi4}
+
+	\usepackage[bigdelims,cmintegrals,garamondx,varg,vvarbb]{newtxmath}
+
+	\DeclareMathSymbol{<}{\mathrel}{letters}{60}
+	\DeclareMathSymbol{>}{\mathrel}{letters}{62}
+\fi
+
+%--------------------------------------------------------------------------
+%
+% 	3.	Formatting
+%
+%--------------------------------------------------------------------------
+
+\if@secnum
+	\theoremstyle{plain}\newtheorem{thm}{Theorem}[section]
+\else
+	\theoremstyle{plain}\newtheorem{thm}{Theorem}
+\fi
+
+\theoremstyle{plain}
+	\newtheorem{conj}				[thm]{Conjecture}
+	\newtheorem{cor}				[thm]{Corollary}
+	\newtheorem{lem}				[thm]{Lemma}
+	\newtheorem{prob}			[thm]{Problem}
+	\newtheorem{prop}			[thm]{Proposition}
+\theoremstyle{definition}
+	\newtheorem{df}				[thm]{Definition}
+	\newtheorem{ex}				[thm]{Example}
+	\newtheorem{xc}				[thm]{Exercise}
+\theoremstyle{remark}
+	\newtheorem{rem}				[thm]{Remark}
+
+%--------------------------------------------------------------------------
+%
+%	4.	Math fonts
+%
+%--------------------------------------------------------------------------
+
+\DeclareMathOperator*{\colim}{colim}
+
+%	http://tex.stackexchange.com/a/5776/20882
+
+\newcommand{\define}[3]{\expandafter#1\csname#3\endcsname{#2{#3}}}
+
+\forcsvlist{\define{\DeclareMathOperator}{}}{ad,adj,codim,coker,disc,fix,id,im,lcm,nil,ob,ord,pr,rad,rank,res,sgn,supp,tr,vol}
+\forcsvlist{\define{\DeclareMathOperator}{}}{Ad,Alt,Ann,Aut,Cor,Der,Div,End,Ext,Fr,Gal,Hom,Ind,Inf,Inn,Irr,Lie,Mat,Max,Out,Pic,Proj,Res,Spec,Spf,Supp,Sym,Tor}
+
+\forcsvlist{\define{\newcommand}{\mathrm}}{ab,al,diag,nr,op,red,sep,tor}
+
+\newcommand{\bb}					{\mathbb}
+\newcommand{\fr}					{\mathfrak}
+\renewcommand{\sf}				{\mathsf}
+
+%	http://tex.stackexchange.com/a/30491
+
+\ifdef{\cal}{\renewcommand{\cal}{\mathcal}}{\newcommand{\cal}{\mathcal}}
+
+\if@cat
+	\forcsvlist{\define{\newcommand}{\mathsf}}{Ab,Alg,Cat,Fun,Grp,Mod,Op,PSh,Sch,Sh,Rep,Ring,Set,Var}
+
+	\ifdef{\Top}{\renewcommand{\Top}{\mathsf{Top}}}{\newcommand{\Top}{\mathsf{Top}}}
+\fi
+
+\if@lie
+	\DeclareMathOperator\OL{O}
+	\DeclareMathOperator\UL{U}
+	
+	\forcsvlist{\define{\DeclareMathOperator}{}}{GL,PGL,PSL,SL,SO,SU,Sp,USp}
+\fi
+
+%--------------------------------------------------------------------------
+%
+%	5. Other commands and operators
+%
+%--------------------------------------------------------------------------
+
+\let\Re\relax\DeclareMathOperator\Re 		{Re}
+\let\Im\relax\DeclareMathOperator\Im		{Im}
+
+\newcommand{\capprod}				{\smallfrown}
+	\newcommand{\cupprod}			{\smallsmile}
+\newcommand{\inject}				{\hookrightarrow}
+	\newcommand{\surject}			{\twoheadrightarrow}
+\newcommand{\n}					{\nonumber}
+\newcommand{\nn}					{\nonumber\\}
+\newcommand{\normal}				{\vartriangleleft}
+	\newcommand{\normaleq}			{\vartrianglelefteq}
+\newcommand{\pd}					{\partial}
+\newcommand{\pre}				{\prescript}	
+\newcommand{\rational}				{\dashrightarrow}
+\newcommand{\sub}				{\subset}
+	\newcommand{\subeq}			{\subseteq}
+	\newcommand{\subneq}			{\subsetneq}
+\newcommand{\ud}					{\mathrm{d}}
+
+\newcommand{\uline}[1]				{\underline{\smash{#1}}}
+
+\newcommand{\bra}[1]				{\left[ 		#1			\right]}
+\newcommand{\pa}[1]				{\left(			#1			\right)}
+
+\newcommand{\mat}[1]				{\begin{matrix}#1\end{matrix}} 
+	\newcommand{\bmat}[1]			{\bra{ 		\mat{#1} 		}}
+	\newcommand{\pmat}[1]			{\pa{ 			\mat{#1} 		}}
+\newcommand{\smat}[1]				{\begin{smallmatrix}#1\end{smallmatrix}} 
+	\newcommand{\bsmat}[1]			{\bra{ 		\smat{#1} 		}}
+	\newcommand{\psmat}[1]			{\pa{ 			\smat{#1} 		}}
+
+\renewcommand{\emptyset}			{\varnothing}
+
+\renewcommand{\bar}[1]				{\smash{\overline{#1}}}
+\renewcommand{\hat}[1]				{\smash{\widehat{#1}}}
+\renewcommand{\tilde}[1]				{\smash{\widetilde{#1}}}
+
+%--------------------------------------------------------------------------
+
+\endinput
