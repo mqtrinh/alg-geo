@@ -1,7 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.22)  30 MAR 2015 22:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.22)  20 MAR 2015 13:24
 entering extended mode
 **trinh_alg-geo_00.tex
-(C:\github\alg-geo\trinh_alg-geo_00.tex
+
+(C:\Users\Minh-Tam\Dropbox\work_math\math_formal\work_alg-geo\trinh_alg-geo_00.
+tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -1299,7 +1301,8 @@ LaTeX Font Info:    Try loading font information for T1+zgmx on input line 39.
 (C:\Users\Minh-Tam\AppData\Roaming\MiKTeX\2.9\tex\latex\garamondx\t1zgmx.fd
 File: t1zgmx.fd 2012/10/29 Fontinst v1.933 font definitions for T1/zgmx.
 )
-(C:\github\alg-geo\build\trinh_alg-geo_00.aux)
+(C:\Users\Minh-Tam\Dropbox\work_math\math_formal\work_alg-geo\build\trinh_alg-g
+eo_00.aux)
 LaTeX Font Info:    Checking defaults for OML/zgmmi/m/it on input line 39.
 LaTeX Font Info:    Try loading font information for OML+zgmmi on input line 39
 .
@@ -1420,8 +1423,10 @@ LaTeX Info: Redefining \ref on input line 39.
 LaTeX Info: Redefining \pageref on input line 39.
 LaTeX Info: Redefining \nameref on input line 39.
 
-(C:\github\alg-geo\build\trinh_alg-geo_00.out)
-(C:\github\alg-geo\build\trinh_alg-geo_00.out)
+(C:\Users\Minh-Tam\Dropbox\work_math\math_formal\work_alg-geo\build\trinh_alg-g
+eo_00.out)
+(C:\Users\Minh-Tam\Dropbox\work_math\math_formal\work_alg-geo\build\trinh_alg-g
+eo_00.out)
 \@outlinefile=\write4
 LaTeX Info: Redefining \microtypecontext on input line 39.
 Package microtype Info: Generating PDF output.
@@ -1464,7 +1469,9 @@ ABD: EveryShipout initializing macros [1
 
 ] [2]
 Contents
-(C:\github\alg-geo\build\trinh_alg-geo_00.toc)
+
+(C:\Users\Minh-Tam\Dropbox\work_math\math_formal\work_alg-geo\build\trinh_alg-g
+eo_00.toc)
 \tf@toc=\write5
  [3
 
@@ -1501,7 +1508,7 @@ ead on input line 72.
 
 ]
 Chapter 0
-LaTeX Font Info:    Try loading font information for U+eus on input line 90.
+LaTeX Font Info:    Try loading font information for U+eus on input line 88.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\ueus.fd"
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
@@ -1544,11 +1551,13 @@ Bibliography
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1199.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1199.
- (C:\github\alg-geo\build\trinh_alg-geo_00.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1199.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1199.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1197.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1197.
+
+(C:\Users\Minh-Tam\Dropbox\work_math\math_formal\work_alg-geo\build\trinh_alg-g
+eo_00.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1197.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1197.
 
 Package rerunfilecheck Info: File `trinh_alg-geo_00.out' has not changed.
 (rerunfilecheck)             Checksum: 63BE659563EE25B26A8315859A448E75;1833.
@@ -1559,11 +1568,11 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 23162 strings out of 493921
- 421149 string characters out of 3144924
+ 23153 strings out of 493921
+ 421712 string characters out of 3144924
  499387 words of memory out of 3000000
  25226 multiletter control sequences out of 15000+200000
- 230640 words of font info for 428 fonts, out of 3000000 for 9000
+ 229962 words of font info for 422 fonts, out of 3000000 for 9000
  1002 hyphenation exceptions out of 8191
  61i,19n,70p,803b,933s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Minh-Tam/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/garamondx/newg8
@@ -1591,10 +1600,10 @@ nts/type1/public/txfonts/txmia.pfb><C:/Users/Minh-Tam/AppData/Roaming/MiKTeX/2.
 KTeX/2.9/fonts/type1/public/txfonts/txsyb.pfb><C:/Users/Minh-Tam/AppData/Roamin
 g/MiKTeX/2.9/fonts/type1/public/txfonts/txsyc.pfb><C:/Users/Minh-Tam/AppData/Ro
 aming/MiKTeX/2.9/fonts/type1/public/boondox/zxxrl8a.pfb>
-Output written on C:/github/alg-geo/build/trinh_alg-geo_00.pdf (24 pages, 33731
-6 bytes).
+Output written on C:/Users/Minh-Tam/Dropbox/work_math/math_formal/work_alg-geo/
+build/trinh_alg-geo_00.pdf (24 pages, 337158 bytes).
 PDF statistics:
- 597 PDF objects out of 1000 (max. 8388607)
- 238 named destinations out of 1000 (max. 500000)
+ 596 PDF objects out of 1000 (max. 8388607)
+ 237 named destinations out of 1000 (max. 500000)
  44277 words of extra memory for PDF output out of 51595 (max. 10000000)
 
