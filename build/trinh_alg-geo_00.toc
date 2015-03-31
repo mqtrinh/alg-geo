@@ -3,6 +3,7 @@
 \contentsline {chapter}{\tocchapter {Chapter}{0}{Ringed Spaces}}{2}{chapter.0}
 \contentsline {subsection}{\tocsubsection {}{0.1}{}}{2}{subsection.0.0.1}
 \contentsline {section}{\tocsection {}{1}{Definition}}{2}{section.0.1}
+\contentsline {subsection}{\tocsubsection {}{1.1}{}}{2}{subsection.0.1.1}
 \contentsline {section}{\tocsection {}{2}{Sheaves}}{2}{section.0.2}
 \contentsline {subsection}{\tocsubsection {}{2.1}{}}{2}{subsection.0.2.1}
 \contentsline {subsection}{\tocsubsection {}{2.2}{}}{3}{subsection.0.2.2}
